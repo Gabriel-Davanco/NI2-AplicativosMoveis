@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="monospace"
+        android:text="@string/appTxtTitulo"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtSubTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="monospace"
+        android:textAlignment="center"
+        android:text="@string/appTxtSubTitulo"
+        android:textSize="18sp"
+        />
+
+    <CheckBox
+        android:id="@+id/cbArroz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/appTxtItemArroz"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:fontFamily="monospace"
+        android:buttonTint="@color/clrLaranja"/>
+
+    <CheckBox
+        android:id="@+id/cbLeite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/appTxtItemLeite"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:fontFamily="monospace"
+        android:buttonTint="@color/clrLaranja"/>
+
+    <CheckBox
+        android:id="@+id/cbCarne"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/appTxtItemCarne"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:fontFamily="monospace"
+        android:buttonTint="@color/clrLaranja"/>
+
+    <CheckBox
+        android:id="@+id/cbFeijao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/appTxtItemFeijao"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:fontFamily="monospace"
+        android:buttonTint="@color/clrLaranja"/>
+
+    <CheckBox
+        android:id="@+id/cbCoca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/appTxtItemCoca"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:fontFamily="monospace"
+        android:buttonTint="@color/clrLaranja"
+        />
+
+    <TextView
+        android:id="@+id/txtResultado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="monospace"
+        android:text="@string/appTxtResultado"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnCalcular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/appTxtBtnSet"
+        android:textColor="@color/black"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        android:backgroundTint="@color/clrLaranja"
+        android:onClick="calcular"
+        android:padding="10dp"
+        />
+
+    <Button
+        android:id="@+id/btnLimpar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/clrLaranja"
+        android:onClick="limpar"
+        android:text="@string/appTxtBtnReset"
+        android:textColor="@color/black"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        android:padding="10dp"/>
+</LinearLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="appTxtTitulo">Sistema de compras</string>
+    <string name="appTxtItemArroz">Arroz 1 Kg (R$ 2.69)</string>
+    <string name="appTxtItemLeite">Leite longa vida (R$ 2.70)</string>
+    <string name="appTxtItemCarne">Carne Friboi (R$ 16.70)</string>
+    <string name="appTxtItemFeijao">Feijão carioquinha 1 Kg (R$ 3.38)</string>
+    <string name="appTxtItemCoca">Refrigerante coca-cola 2 litros (R$3.00)</string>
+    <string name="appTxtResultado">R$ 0.00</string>
+    <string name="appTxtBtnSet">Calcular Preço</string>
+    <string name="appTxtBtnReset">Limpar Lista</string>
+    <string name="appTxtSubTitulo">Escolha suas compras:</string>
+
+    <color name="clrLaranja">#bb560e</color>
+
+</resources>
