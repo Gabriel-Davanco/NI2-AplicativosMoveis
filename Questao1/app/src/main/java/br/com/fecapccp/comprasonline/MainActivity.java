@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void calcular(View view){
+        soma = 0.00;
         String txtSoma;
         if(cbArroz.isChecked()) soma += prcArroz;
         if(cbLeite.isChecked()) soma += prcLeite;
