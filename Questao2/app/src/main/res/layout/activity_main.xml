@@ -38,6 +38,7 @@
         android:ems="10"
         android:layout_margin="10dp"
         android:hint="@string/appTxtHint"
+        android:inputType="phone"
        />
 
     <TextView
@@ -53,6 +54,7 @@
         />
 
     <RadioGroup
+        android:id="@+id/rbGroup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -60,33 +62,31 @@
             android:id="@+id/rb40"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:buttonTint="@color/clrLaranja"
+            android:fontFamily="monospace"
             android:text="@string/appTxtAumento40"
             android:textSize="17sp"
-            android:textStyle="bold"
-            android:fontFamily="monospace"
-            android:buttonTint="@color/clrLaranja"
-            />
+            android:textStyle="bold" />
 
         <RadioButton
             android:id="@+id/rb45"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:buttonTint="@color/clrLaranja"
+            android:fontFamily="monospace"
             android:text="@string/appTxtAumento45"
             android:textSize="17sp"
-            android:textStyle="bold"
-            android:fontFamily="monospace"
-            android:buttonTint="@color/clrLaranja"
-            />
+            android:textStyle="bold" />
 
         <RadioButton
             android:id="@+id/rb50"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:buttonTint="@color/clrLaranja"
+            android:fontFamily="monospace"
             android:text="@string/appTxtAumento50"
             android:textSize="17sp"
-            android:textStyle="bold"
-            android:fontFamily="monospace"
-            android:buttonTint="@color/clrLaranja"/>
+            android:textStyle="bold" />
 
     </RadioGroup>
     <TextView
@@ -104,6 +104,7 @@
         android:id="@+id/btnSet"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="calcular"
         android:text="@string/appBtnSet"
         android:textSize="23sp"
         android:textStyle="bold"
@@ -115,6 +116,7 @@
         android:id="@+id/btnReset"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="limpar"
         android:text="@string/appBtnReset"
         android:textSize="23sp"
         android:textStyle="bold"
