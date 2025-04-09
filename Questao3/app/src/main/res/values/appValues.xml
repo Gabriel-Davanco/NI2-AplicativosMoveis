@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="appT1Titulo">Seja bem-vindo</string>
+    <string name="appT1BtnCadastro">Se cadastre</string>
+
+    <string name="appT2etNome">Digite seu nome</string>
+    <string name="appT2btnConcluir">Concluir cadastro</string>
+
+    <string name="appT3btnVoltar">Voltar para a página inicial</string>
+
+    <color name="preto">#000000</color>
+    <color name="branco">#ffffff</color>
+    <color name="cinza">#d1d1d1</color>
+    <color name="amarelo">#ffaf1f</color>
+
+</resources>
