@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="appT1txtTitulo">Seja bem-vindo</string>
+    <string name="appT1txtSubtitulo">Escolha os sabores da sua pizza</string>
+    <string name="appT1cbPizza1">Calabresa</string>
+    <string name="appT1cbPizza2">Portuguesa</string>
+    <string name="appT1cbPizza3">Marguerita</string>
+    <string name="appT1btnContinuar">Continuar</string>
+
+    <string name="appT2txtTamanho">Qual tamanho de pizza você gostaria?</string>
+    <string name="appT2txtPagamento">Qual a forma de pagamento?</string>
+    <string name="appT2rbTamanho1">Pequena (R$44,99)</string>
+    <string name="appT2rbTamanho2">Média (R$49,99)</string>
+    <string name="appT2rbTamanho3">Grande (R$54,99)</string>
+    <string name="appT2rbPagamento1">Cartão</string>
+    <string name="appT2rbPagamento2">Dinheiro</string>
+    <string name="appT2btnConcluir">Concluir pedido</string>
+
+    <string name="appT3btnVoltar">Voltar para tela inicial</string>
+
+<!--cores-->
+    <color name="clrPreto">#000000</color>
+    <color name="clrBranco">#ffffff</color>
+    <color name="clrAmarelo">#FFC100</color>
+
+</resources>
