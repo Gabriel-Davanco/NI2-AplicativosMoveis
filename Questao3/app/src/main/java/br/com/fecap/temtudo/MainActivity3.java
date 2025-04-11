@@ -32,8 +32,8 @@ public class MainActivity3 extends AppCompatActivity {
 
         btnVoltar.setOnClickListener(view -> {
             Intent intent = new Intent(this, MainActivity.class);
-            startActivity(intent);
             finish();
+            startActivity(intent);
         });
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
