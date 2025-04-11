@@ -28,7 +28,7 @@ public class MainActivity3 extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
 
         nome = bundle.getString("nome");
-        txtNome.setText("Muito obrigado por concluir o cadastro " + nome + ", esperamos que aproveite de seus benefícios!");
+        txtNome.setText("Muito obrigado por concluir o cadastro, " + nome + ", esperamos que aproveite de seus benefícios!");
 
         btnVoltar.setOnClickListener(view -> {
             Intent intent = new Intent(this, MainActivity.class);
