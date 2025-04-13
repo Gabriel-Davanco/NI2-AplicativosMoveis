@@ -40,34 +40,47 @@ public class MainActivity2 extends AppCompatActivity {
         total = Integer.parseInt(strTotal);
         //if(bundle.getString("calabresa")) ;
 
-        btnConcluir2.setOnClickListener(view->{
+        btnConcluir2.setOnClickListener(view -> {
             Intent intent = new Intent(this, MainActivity3.class);
-            if(rbTamanho1.isChecked()){
+
+            // Verificação se nenhum tamanho foi selecionado
+            if (!rbTamanho1.isChecked() && !rbTamanho2.isChecked() && !rbTamanho3.isChecked()) {
+                rbTamanho1.setError("Selecione um tamanho de pizza");
+                rbTamanho2.setError("Selecione um tamanho de pizza");
+                rbTamanho3.setError("Selecione um tamanho de pizza");
+                return;
+            }
+
+            // Verificação se nenhuma forma de pagamento foi selecionada
+            if (!rbPagamento1.isChecked() && !rbPagamento2.isChecked()) {
+                rbPagamento1.setError("Selecione uma forma de pagamento");
+                rbPagamento2.setError("Selecione uma forma de pagamento");
+                return;
+            }
+
+            // Adiciona o tamanho ao total
+            if (rbTamanho1.isChecked()) {
                 intent.putExtra("tamanho", "pequena");
                 total += 45;
-            }
-            else if(rbTamanho2.isChecked()){
+            } else if (rbTamanho2.isChecked()) {
                 intent.putExtra("tamanho", "média");
                 total += 50;
-            }
-            else if(rbTamanho3.isChecked()){
+            } else if (rbTamanho3.isChecked()) {
                 intent.putExtra("tamanho", "grande");
                 total += 55;
             }
 
-            if(rbPagamento1.isChecked()) intent.putExtra("pagamento", "cartão");
-            else if(rbPagamento2.isChecked()) intent.putExtra("pagamento", "dinheiro");
+            // Forma de pagamento
+            if (rbPagamento1.isChecked()) {
+                intent.putExtra("pagamento", "cartão");
+            } else if (rbPagamento2.isChecked()) {
+                intent.putExtra("pagamento", "dinheiro");
+            }
 
+            // Enviando dados restantes
             intent.putExtra("sabores", getIntent().getStringExtra("sabores"));
             intent.putExtra("total", String.valueOf(total));
             startActivity(intent);
-        });
-
-
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
         });
     }
 }
