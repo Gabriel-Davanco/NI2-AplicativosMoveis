@@ -18,6 +18,8 @@ public class MainActivity2 extends AppCompatActivity {
     private RadioButton rbTamanho3;
     private RadioButton rbPagamento1;
     private RadioButton rbPagamento2;
+    private int total;
+    private String strTotal;
     private Button btnConcluir2;
 
     @Override
@@ -33,15 +35,31 @@ public class MainActivity2 extends AppCompatActivity {
         rbPagamento2 = findViewById(R.id.rbPagamento2);
         btnConcluir2 = findViewById(R.id.btnContinuar2);
 
+        Bundle bundle = getIntent().getExtras();
+        strTotal = bundle.getString("total");
+        total = Integer.parseInt(strTotal);
+        //if(bundle.getString("calabresa")) ;
+
         btnConcluir2.setOnClickListener(view->{
             Intent intent = new Intent(this, MainActivity3.class);
-            if(rbTamanho1.isChecked()) intent.putExtra("pequeno", "pequeno");
-            else if(rbTamanho2.isChecked()) intent.putExtra("medio", "médio");
-            else if(rbTamanho3.isChecked()) intent.putExtra("grande", "grande");
+            if(rbTamanho1.isChecked()){
+                intent.putExtra("tamanho", "pequena");
+                total += 45;
+            }
+            else if(rbTamanho2.isChecked()){
+                intent.putExtra("tamanho", "média");
+                total += 50;
+            }
+            else if(rbTamanho3.isChecked()){
+                intent.putExtra("tamanho", "grande");
+                total += 55;
+            }
 
-            if(rbPagamento1.isChecked()) intent.putExtra("cartao", "cartão");
-            if(rbPagamento2.isChecked()) intent.putExtra("dinheiro", "dinheiro");
+            if(rbPagamento1.isChecked()) intent.putExtra("pagamento", "cartão");
+            else if(rbPagamento2.isChecked()) intent.putExtra("pagamento", "dinheiro");
 
+            intent.putExtra("sabores", getIntent().getStringExtra("sabores"));
+            intent.putExtra("total", String.valueOf(total));
             startActivity(intent);
         });
 

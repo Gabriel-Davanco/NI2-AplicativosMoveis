@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     private CheckBox cbCalabresa;
     private CheckBox cbPortuguesa;
     private CheckBox cbMarguerita;
+    private int total;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         cbCalabresa = findViewById(R.id.pizza1);
         cbPortuguesa = findViewById(R.id.pizza2);
         cbMarguerita = findViewById(R.id.pizza3);
+        total = 0;
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -34,14 +36,37 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void PassarTela(View view){
-        Intent intent1 = new Intent(this, MainActivity2.class);
-        Intent intent2 = new Intent(this, MainActivity3.class);
+    public void PassarTela(View view) {
+        Intent intent = new Intent(this, MainActivity2.class);
+        StringBuilder sabores = new StringBuilder();
 
-        if(cbCalabresa.isChecked())intent2.putExtra("calabresa", "calabresa");
-        if(cbPortuguesa.isChecked())intent2.putExtra("portuguesa", "portuguesa");
-        if(cbMarguerita.isChecked())intent2.putExtra("marguerita", "marguerita");
-        startActivity(intent1);
+        if (!cbCalabresa.isChecked() && !cbPortuguesa.isChecked() && !cbMarguerita.isChecked()) {
+            cbCalabresa.setError("Selecione pelo menos um sabor de pizza");
+            cbPortuguesa.setError("Selecione pelo menos um sabor de pizza");
+            cbMarguerita.setError("Selecione pelo menos um sabor de pizza");
+
+        } else {
+            if (cbCalabresa.isChecked()) {
+                sabores.append("Calabresa, ");
+                total += 5;
+            }
+            if (cbPortuguesa.isChecked()) {
+                sabores.append("Portuguesa, ");
+                total += 7;
+            }
+            if (cbMarguerita.isChecked()) {
+                sabores.append("Marguerita, ");
+                total += 4;
+            }
+
+            // Remove a última vírgula e espaço
+            if (sabores.length() > 2) {
+                sabores.setLength(sabores.length() - 2);
+            }
+            intent.putExtra("sabores", sabores.toString());
+            intent.putExtra("total", String.valueOf(total));
+            startActivity(intent);
+        }
     }
 
 }
