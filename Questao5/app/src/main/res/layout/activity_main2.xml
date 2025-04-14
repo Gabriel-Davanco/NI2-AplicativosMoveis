@@ -43,7 +43,7 @@
         android:id="@+id/txtPagamento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/appT1txtSubtitulo"
+        android:text="@string/appT2txtPagamento"
         android:textSize="25sp"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
